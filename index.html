@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Scanzo | Create QR Codes</title>
+		<link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li>
+					<a href="/">
+						<h1>SCANZO</h1>
+					</a>
+				</li>
+			</ul>
+		</nav>
+
+		<section id="main">
+			<div class="left">
+				<div class="center">
+					<input type="text" id="data" placeholder="Enter text or URL" />
+					<div class="qr">
+						<button class="generate" onclick="generateQR()">GENERATE<img class="icon" src="images/arrow_right.svg" alt="Symbol" /></button>
+						<hr />
+						<button class="download"><img class="icon" src="images/download.svg" alt="Symbol" />DOWNLOAD</button>
+						<button class="copy">COPY SVG<img class="icon" src="images/copy.svg" alt="Symbol" /></button>
+					</div>
+				</div>
+			</div>
+			<div class="right">
+				<div id="output"></div>
+			</div>
+		</section>
+
+
+		<footer>
+			<p>&copy; 2026 Scanzo.</p>
+			<p>All rights reserved.</p>
+		</footer>
+		<!-- Libraries -->
+		<script src="https://unpkg.com/qr-code-styling/lib/qr-code-styling.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/jsbarcode"></script>
+
+		<script src="js/script.js"></script>
+	</body>
+</html>
