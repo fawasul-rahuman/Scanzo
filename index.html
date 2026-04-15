@@ -25,8 +25,8 @@
 					<div class="qr">
 						<button class="generate" onclick="generateQR()">GENERATE<img class="icon" src="images/arrow_right.svg" alt="Symbol" /></button>
 						<hr />
-						<button class="download"><img class="icon" src="images/download.svg" alt="Symbol" />DOWNLOAD</button>
-						<button class="copy">COPY SVG<img class="icon" src="images/copy.svg" alt="Symbol" /></button>
+						<button class="download" onclick="downloadQR()"><img class="icon" src="images/download.svg" alt="Symbol" />DOWNLOAD</button>
+						<button class="copy" onclick="copyQR()">COPY SVG<img class="icon" src="images/copy.svg" alt="Symbol" /></button>
 					</div>
 				</div>
 			</div>
@@ -35,6 +35,10 @@
 			</div>
 		</section>
 
+		<div id="alertBox" class="alert-box">
+			<p id="alertMessage"></p>
+			<button onclick="closeAlert()">OK</button>
+		</div>
 
 		<footer>
 			<p>&copy; 2026 Scanzo.</p>
