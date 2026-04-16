@@ -1,7 +1,6 @@
 * {
 	margin: 0;
 	padding: 0;
-	
 	box-sizing: border-box;
 	text-decoration: none;
 	color: #000000;
@@ -13,41 +12,219 @@
 
 body {
 	background: #FFFFFF;
+}
+
+html {
 	scroll-behavior: smooth;
 }
 
+.scroll-loader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 3px;
+	background: #000;
+	width: 0%;
+	transition: width 0.1s linear;
+	z-index: 9999;
+}
+
 nav {
-	padding: 30px 50px;
+	padding: 30px 150px;
 	border-bottom: 3px solid #000000;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	background: #FFFFFF;
 }
 
 nav ul {
 	text-align: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav ul.left {
+
+}
+
+nav ul.left {
+	
 }
 
 nav ul li {
 	font-size: 24px;
 }
 
+nav ul.left li {
+	
+}
+
+nav ul.right li {
+	margin-right: 50px;
+}
+
+nav ul.right li:last-child {
+	margin-right: 0px;
+}
+
 nav ul li a {
 	
 }
 
-nav ul li h1 {
-	font-size: 40px;
+nav ul li a.active {
+	border-bottom: 3px solid #000;
+}
+
+nav ul.left li a {
 	
 }
 
-#main {
+nav ul.right li a {
+	
+}
+
+nav ul li a:hover {
+	border-bottom: 3px solid #000000;
+}
+
+nav ul.left li a h1 {
+	font-size: 40px;
+}
+
+#home {
+	padding: 150px 150px 50px 150px;
+}
+
+#home .wrapper {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	width: 100%;
-	padding: 50px 150px;
-	height: 78vh;
 }
 
-#main .left {
+#home .wrapper .left {
+	width: 50%;
+	height: 100%;
+}
+
+#home .wrapper .left h1 {
+	font-size: 70px;
+}
+
+#home .wrapper .left p {
+	font-size: 20px;
+	color: #000000;
+	margin: 30px 0 80px 0;
+	line-height: 25px;
+}
+
+#home .wrapper .left a.btn {
+	width: 300px;
+	padding: 20px 30px;
+	height: 50px;
+	font-size: 24px;
+	border: 3px solid #000;
+}
+
+#home .wrapper .left a.btn:hover {
+	background: #000;
+	color: #FFFFFF;
+}
+
+#home .wrapper .right {
+	width: 50%;
+}
+
+#home .wrapper .right img {
+	width: 100%;
+}
+
+hr.home {
+	border-bottom: 3px solid #000000;
+	margin: 50px auto;
+	width: 80%;
+}
+
+section#features {
+	padding: 50px 150px;
+}
+
+section#features h1 {
+	font-size: 36px;
+	border-bottom: 3px solid #000000;
+	width: fit-content;
+}
+
+section#features p {
+	font-size: 20px;
+	margin-top: 30px;
+	color: #000000;
+	line-height: 25px;
+}
+
+section#features .wrapper {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
+	text-align: center;
+	margin-top: 50px;
+	height: 80vh;
+	width: 100%;
+}
+
+section#features .wrapper .feature-card {
+	width: 30%;
+	border: 3px solid #000;
+	height: 300px;
+}
+
+section#features .wrapper .feature-card img {
+	width: 20%;
+	margin-top: 25px;
+}
+
+section#features .wrapper .feature-card h3 {
+	font-size: 24px;
+	margin: 0 auto;
+	max-width: 200px;
+}
+
+section#features .wrapper .feature-card p {
+	max-width: 300px;
+	margin: 30px auto;
+}
+
+#tool {
+	padding: 50px 150px;
+}
+
+#tool h1 {
+	font-size: 36px;
+	border-bottom: 3px solid #000000;
+	width: fit-content;
+}
+
+#tool p {
+	font-size: 20px;
+	margin-top: 30px;
+	color: #000000;
+	line-height: 25px;
+}
+
+#tool .wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 80vh;
+	width: 100%;
+}
+
+#tool .wrapper .left {
 	width: 50%;
 	height: 100%;
 	display: flex;
@@ -55,7 +232,7 @@ nav ul li h1 {
 	align-items: center;
 }
 
-#main .left .center {
+#tool .wrapper .left .center {
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -63,7 +240,7 @@ nav ul li h1 {
 	justify-content: center;
 }
 
-#main .left input {
+#tool .wrapper .left .center input {
 	width: 80%;
 	height: 70px;
 	font-size: 20px;
@@ -71,18 +248,18 @@ nav ul li h1 {
 	border: 3px solid #000000;
 }
 
-#main .left input:focus {
+#tool .wrapper .left .center input:focus {
 	background: #F6F6F6;
-	box-shadow: 6px 6px #A4A4A4;
+	box-shadow: 6px 6px #000000;
 	outline: none;
 }
 
-#main .left .center div.qr {
+#tool .wrapper .left .center div.qr {
 	margin-top: 30px;
 	width: 100%;
 }
 
-#main .left .center div.qr button {
+#tool .wrapper .left .center div.qr button {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -96,11 +273,11 @@ nav ul li h1 {
 	filter: invert(1);
 }
 
-#main .left .center div.qr button:hover .icon {
+#tool .wrapper .left .center div.qr button:hover .icon {
 	filter: invert(0);
 }
 
-#main .left .center div.qr button.generate {
+#tool .wrapper .left .center div.qr button.generate {
 	border: 3px solid #000000;
 	width: 80%;
 	height: 70px;
@@ -111,20 +288,20 @@ nav ul li h1 {
 	padding: 0 0 0 20px;
 }
 
-#main .left .center div.qr button.generate:hover {
+#tool .wrapper .left .center div.qr button.generate:hover {
 	background: #FFFFFF;
 	color: #000000;
-	box-shadow: 6px 6px #A4A4A4;
+	box-shadow: 6px 6px #000000;
 	outline: none;
 }
 
-#main .left .center div.qr button.generate .icon {
+#tool .wrapper .left .center div.qr button.generate .icon {
 	margin-right: 0;
 	margin-left: 30px;
 	filter: invert(0);
 }
 
-#main .left .center div.qr button.generate:hover .icon {
+#tool .wrapper .left .center div.qr button.generate:hover .icon {
 	filter: invert(1);
 }
 
@@ -134,7 +311,7 @@ hr {
 	width: 80%;
 }
 
-#main .left .center div.qr button.download {
+#tool .wrapper .left .center div.qr button.download {
 	background: #000000;
 	width: 80%;
 	margin-bottom: 30px;
@@ -144,25 +321,25 @@ hr {
 	padding: 0 0 0 20px;
 }
 
-#main .left .center div.qr button.download .icon {
+#tool .wrapper .left .center div.qr button.download .icon {
 	margin-left: 0;
 	margin-right: 30px;
 	filter: invert(0);
 }
 
-#main .left .center div.qr button.download:hover .icon {
+#tool .wrapper .left .center div.qr button.download:hover .icon {
 	filter: invert(1);
 }
 
-#main .left .center div.qr button.download:hover {
+#tool .wrapper .left .center div.qr button.download:hover {
 	background: #FFFFFF;
 	border: 3px solid #000000;
-	box-shadow: 6px 6px #A4A4A4;
+	box-shadow: 6px 6px #000000;
 	outline: none;
 	color: #000000;
 }
 
-#main .left .center div.qr button.copy {
+#tool .wrapper .left .center div.qr button.copy {
 	border: 3px solid #000000;
 	width: 80%;
 	background: #FFFFFF;
@@ -171,24 +348,29 @@ hr {
 	padding: 0 0 0 20px;
 }
 
-#main .left .center div.qr button.copy:hover {
+#tool .wrapper .left .center div.qr button.copy:hover {
 	background: #000000;
 	color: #FFFFFF;
-	box-shadow: 6px 6px #A4A4A4;
+	box-shadow: 6px 6px #000000;
 	outline: none;
 }
 
-#main .right  {
+#tool .wrapper .right {
 	border: 3px solid #000000;
 	width: 50%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100%;
+	height: 75%;
 }
 
-#main .right #output  {
+#tool .wrapper .right #output {
 	
+}
+
+#tool .wrapper .right #output canavas {
+	width: 100%;
+	height: 100%;
 }
 
 .alert-box {
@@ -226,6 +408,55 @@ hr {
 	background: #fff;
 	color: #000;
 }
+#faqs {
+	padding: 50px 150px;
+}
+
+#faqs h1 {
+	font-size: 36px;
+	border-bottom: 3px solid #000000;
+	width: fit-content;
+}
+
+#faqs p {
+	font-size: 20px;
+	margin-top: 30px;
+	color: #000000;
+	line-height: 25px;
+}
+
+#faqs .wrapper {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 50px;
+}
+
+#faqs .faq-card {
+	width: 48%;
+	border: 3px solid #000;
+	padding: 20px;
+	margin-bottom: 30px;
+	position: relative;
+}
+
+#faqs .faq-card img {
+	position: absolute;
+	top: 10px;
+	right: 13px;
+	width: 10%;
+}
+
+#faqs .faq-card h3 {
+	font-size: 22px;
+	margin-bottom: 15px;
+}
+
+#faqs .faq-card p {
+	font-size: 18px;
+	color: #000000;
+	line-height: 25px;
+}
 
 footer {
 	border-top: 3px solid #000000;
@@ -239,951 +470,5 @@ footer p {
 	font-size: 20px;
 	text-align: center;
 	margin: 30px 0;
-	color: #A4A4A4;
-}
-
-@media (max-width: 1024px) {	
-	nav {
-		padding: 30px 50px;
-		border-bottom: 3px solid #000000;
-	}
-
-	nav ul {
-		text-align: center;
-	}
-
-	nav ul li {
-		font-size: 24px;
-	}
-
-	nav ul li a {
-		
-	}
-
-	nav ul li h1 {
-		font-size: 40px;
-		
-	}
-
-	#main {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		width: 100%;
-		padding: 80px 100px;
-		height: 70vh;
-	}
-
-	#main .left {
-		width: 50%;
-		height: 100%;
-		display: flex;
-		justify-content: center;	
-		align-items: center;
-	}
-
-	#main .left .center {
-		width: 100%;
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
-
-	#main .left input {
-		width: 80%;
-		height: 70px;
-		font-size: 20px;
-		padding: 0 0 0 20px;
-		border: 3px solid #000000;
-	}
-
-	#main .left input:focus {
-		background: #F6F6F6;
-	}
-
-	#main .left .center div.qr {
-		margin-top: 30px;
-		width: 100%;
-	}
-
-	#main .left .center div.qr button {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.icon {
-		width: 30px;
-		height: 30px;
-		background: transparent;
-		margin: 0 30px;
-		filter: invert(1);
-	}
-
-	#main .left .center div.qr button:hover .icon {
-		filter: invert(0);
-	}
-
-	#main .left .center div.qr button.generate {
-		border: 3px solid #000000;
-		width: 80%;
-		height: 70px;
-		font-size: 20px;
-		background: #000000;
-		color: #FFFFFF;
-		margin-bottom: 30px;
-		padding: 0 0 0 20px;
-	}
-
-	#main .left .center div.qr button.generate:hover {
-		background: #FFFFFF;
-		color: #000000;
-	}
-
-	#main .left .center div.qr button.generate .icon {
-		margin-right: 0;
-		margin-left: 30px;
-		filter: invert(0);
-	}
-
-	#main .left .center div.qr button.generate:hover .icon {
-		filter: invert(1);
-	}
-
-	hr {
-		border-bottom: 3px solid #000000;
-		margin: 30px 0;
-		width: 80%;
-	}
-
-	#main .left .center div.qr button.download {
-		background: #000000;
-		width: 80%;
-		margin-bottom: 30px;
-		height: 70px;
-		color: #FFFFFF;
-		font-size: 20px;
-		padding: 0 0 0 20px;
-	}
-
-	#main .left .center div.qr button.download .icon {
-		margin-left: 0;
-		margin-right: 30px;
-		filter: invert(0);
-	}
-
-	#main .left .center div.qr button.download:hover .icon {
-		filter: invert(1);
-	}
-
-	#main .left .center div.qr button.download:hover {
-		background: #FFFFFF;
-		border: 3px solid #000000;
-		color: #000000;
-	}
-
-	#main .left .center div.qr button.copy {
-		border: 3px solid #000000;
-		width: 80%;
-		background: #FFFFFF;
-		height: 70px;
-		font-size: 20px;
-		padding: 0 0 0 20px;
-	}
-
-	#main .left .center div.qr button.copy:hover {
-		background: #000000;
-		color: #FFFFFF;
-	}
-
-	#main .right  {
-		border: 3px solid #000000;
-		width: 50%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 100%;
-	}
-
-	#main .right #output {
-		
-	}
-	
-	#main .right #output canvas {
-		width: 350px;
-		height: 350px;
-	}
-
-	footer {
-		border-top: 3px solid #000000;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 0 100px;
-	}
-
-	footer p {
-		font-size: 20px;
-		text-align: center;
-		color: #A4A4A4;
-		margin: 30px 0;
-	}
-}
-
-@media (max-width: 768px) {	
-	nav {
-		padding: 30px 50px;
-		border-bottom: 3px solid #000000;
-	}
-
-	nav ul {
-		text-align: center;
-	}
-
-	nav ul li {
-		font-size: 24px;
-	}
-
-	nav ul li a {
-		
-	}
-
-	nav ul li h1 {
-		font-size: 40px;
-		
-	}
-
-	#main {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		width: 100%;
-		padding: 80px 50px;
-		height: 70vh;
-	}
-
-	#main .left {
-		width: 50%;
-		height: 100%;
-		display: flex;
-		justify-content: center;	
-		align-items: center;
-	}
-
-	#main .left .center {
-		width: 100%;
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
-
-	#main .left input {
-		width: 80%;
-		height: 70px;
-		font-size: 20px;
-		padding: 0 0 0 20px;
-		border: 3px solid #000000;
-	}
-
-	#main .left input:focus {
-		background: #F6F6F6;
-	}
-
-	#main .left .center div.qr {
-		margin-top: 30px;
-		width: 100%;
-	}
-
-	#main .left .center div.qr button {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.icon {
-		width: 30px;
-		height: 30px;
-		background: transparent;
-		margin: 0 30px;
-		filter: invert(1);
-	}
-
-	#main .left .center div.qr button:hover .icon {
-		filter: invert(0);
-	}
-
-	#main .left .center div.qr button.generate {
-		border: 3px solid #000000;
-		width: 80%;
-		height: 70px;
-		font-size: 20px;
-		background: #000000;
-		color: #FFFFFF;
-		padding: 0 0 0 20px;
-	}
-
-	#main .left .center div.qr button.generate:hover {
-		background: #FFFFFF;
-		color: #000000;
-	}
-
-	#main .left .center div.qr button.generate .icon {
-		margin-right: 0;
-		margin-left: 30px;
-		filter: invert(0);
-	}
-
-	#main .left .center div.qr button.generate:hover .icon {
-		filter: invert(1);
-	}
-
-	hr {
-		border-bottom: 3px solid #000000;
-		margin: 30px 0;
-		width: 80%;
-	}
-
-	#main .left .center div.qr button.download {
-		background: #000000;
-		width: 80%;
-		margin-bottom: 20px;
-		height: 70px;
-		color: #FFFFFF;
-		font-size: 20px;
-		padding: 0 0 0 20px;
-	}
-
-	#main .left .center div.qr button.download .icon {
-		margin-left: 0;
-		margin-right: 30px;
-		filter: invert(0);
-	}
-
-	#main .left .center div.qr button.download:hover .icon {
-		filter: invert(1);
-	}
-
-	#main .left .center div.qr button.download:hover {
-		background: #FFFFFF;
-		border: 3px solid #000000;
-		color: #000000;
-	}
-
-	#main .left .center div.qr button.copy {
-		border: 3px solid #000000;
-		width: 80%;
-		background: #FFFFFF;
-		height: 70px;
-		font-size: 20px;
-		padding: 0 0 0 20px;
-	}
-
-	#main .left .center div.qr button.copy:hover {
-		background: #000000;
-		color: #FFFFFF;
-	}
-
-	#main .right  {
-		border: 3px solid #000000;
-		width: 50%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 100%;
-	}
-
-	#main .right #output {
-		
-	}
-	
-	#main .right #output canvas {
-		width: 300px;
-		height: 300px;
-	}
-
-	footer {
-		border-top: 3px solid #000000;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 0 50px;
-	}
-
-	footer p {
-		font-size: 20px;
-		text-align: center;
-		margin: 30px 0;
-		color: #A4A4A4;
-	}
-}
-
-@media (max-width: 425px) {	
-	nav {
-		padding: 20px 50px;
-		border-bottom: 3px solid #000000;
-	}
-
-	nav ul {
-		text-align: center;
-	}
-
-	nav ul li {
-		
-	}
-
-	nav ul li a {
-		
-	}
-
-	nav ul li h1 {
-		font-size: 30px;
-		
-	}
-
-	#main {
-		display: block;
-		justify-content: space-between;
-		align-items: center;
-		width: 100%;
-		padding: 50px 30px;
-		height: auto;
-	}
-
-	#main .left {
-		width: 100%;
-		height: 100%;
-		display: flex;
-		justify-content: center;	
-		align-items: center;
-	}
-
-	#main .left .center {
-		width: 100%;
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
-
-	#main .left input {
-		width: 100%;
-		height: 70px;
-		font-size: 20px;
-		padding: 0 0 0 20px;
-		border: 3px solid #000000;
-	}
-
-	#main .left input:focus {
-		background: #F6F6F6;
-	}
-
-	#main .left .center div.qr {
-		margin-top: 30px;
-		width: 100%;
-	}
-
-	#main .left .center div.qr button {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.icon {
-		width: 30px;
-		height: 30px;
-		background: transparent;
-		margin: 0 30px;
-		filter: invert(1);
-	}
-
-	#main .left .center div.qr button:hover .icon {
-		filter: invert(0);
-	}
-
-	#main .left .center div.qr button.generate {
-		border: 3px solid #000000;
-		width: 100%;
-		height: 70px;
-		font-size: 20px;
-		background: #000000;
-		color: #FFFFFF;
-		padding: 0 0 0 20px;
-	}
-
-	#main .left .center div.qr button.generate:hover {
-		background: #FFFFFF;
-		color: #000000;
-	}
-
-	#main .left .center div.qr button.generate .icon {
-		margin-right: 0;
-		margin-left: 30px;
-		filter: invert(0);
-	}
-
-	#main .left .center div.qr button.generate:hover .icon {
-		filter: invert(1);
-	}
-
-	hr {
-		border-bottom: 3px solid #000000;
-		margin: 30px 0;
-		width: 100%;
-	}
-
-	#main .left .center div.qr button.download {
-		background: #000000;
-		width: 100%;
-		margin-bottom: 20px;
-		height: 70px;
-		color: #FFFFFF;
-		font-size: 20px;
-		padding: 0 0 0 20px;
-	}
-
-	#main .left .center div.qr button.download .icon {
-		margin-left: 0;
-		margin-right: 30px;
-		filter: invert(0);
-	}
-
-	#main .left .center div.qr button.download:hover .icon {
-		filter: invert(1);
-	}
-
-	#main .left .center div.qr button.download:hover {
-		background: #FFFFFF;
-		border: 3px solid #000000;
-		color: #000000;
-	}
-
-	#main .left .center div.qr button.copy {
-		border: 3px solid #000000;
-		width: 100%;
-		background: #FFFFFF;
-		height: 70px;
-		font-size: 20px;
-		padding: 0 0 0 20px;
-	}
-
-	#main .left .center div.qr button.copy:hover {
-		background: #000000;
-		color: #FFFFFF;
-	}
-
-	#main .right  {
-		border: 3px solid #000000;
-		width: 100%;
-		display: flex;
-		margin-top: 50px;
-		justify-content: center;
-		align-items: center;
-		height: 370px;
-	}
-
-	#main .right #output {
-		
-	}
-	
-	#main .right #output canvas {
-		width: 300px;
-		height: 300px;
-	}
-
-	footer {
-		border-top: 3px solid #000000;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-		padding: 0 30px;
-	}
-
-	footer p {
-		font-size: 16px;
-		text-align: center;
-		margin: 25px 0;
-		color: #A4A4A4;
-	}
-}
-
-@media (max-width: 375px) {	
-	nav {
-		padding: 20px 50px;
-		border-bottom: 3px solid #000000;
-	}
-
-	nav ul {
-		text-align: center;
-	}
-
-	nav ul li {
-		
-	}
-
-	nav ul li a {
-		
-	}
-
-	nav ul li h1 {
-		font-size: 26px;
-		
-	}
-
-	#main {
-		display: block;
-		justify-content: space-between;
-		align-items: center;
-		width: 100%;
-		padding: 30px 20px;
-		height: auto;
-	}
-
-	#main .left {
-		width: 100%;
-		height: 100%;
-		display: flex;
-		justify-content: center;	
-		align-items: center;
-	}
-
-	#main .left .center {
-		width: 100%;
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
-
-	#main .left input {
-		width: 100%;
-		height: 70px;
-		font-size: 20px;
-		padding: 0 0 0 20px;
-		border: 3px solid #000000;
-	}
-
-	#main .left input:focus {
-		background: #F6F6F6;
-	}
-
-	#main .left .center div.qr {
-		margin-top: 30px;
-		width: 100%;
-	}
-
-	#main .left .center div.qr button {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.icon {
-		width: 30px;
-		height: 30px;
-		background: transparent;
-		margin: 0 30px;
-		filter: invert(1);
-	}
-
-	#main .left .center div.qr button:hover .icon {
-		filter: invert(0);
-	}
-
-	#main .left .center div.qr button.generate {
-		border: 3px solid #000000;
-		width: 100%;
-		height: 70px;
-		font-size: 20px;
-		background: #000000;
-		color: #FFFFFF;
-		padding: 0 0 0 20px;
-	}
-
-	#main .left .center div.qr button.generate:hover {
-		background: #FFFFFF;
-		color: #000000;
-	}
-
-	#main .left .center div.qr button.generate .icon {
-		margin-right: 0;
-		margin-left: 30px;
-		filter: invert(0);
-	}
-
-	#main .left .center div.qr button.generate:hover .icon {
-		filter: invert(1);
-	}
-
-	hr {
-		border-bottom: 3px solid #000000;
-		margin: 30px 0;
-		width: 100%;
-	}
-
-	#main .left .center div.qr button.download {
-		background: #000000;
-		width: 100%;
-		margin-bottom: 20px;
-		height: 70px;
-		color: #FFFFFF;
-		font-size: 20px;
-		padding: 0 0 0 20px;
-	}
-
-	#main .left .center div.qr button.download .icon {
-		margin-left: 0;
-		margin-right: 30px;
-		filter: invert(0);
-	}
-
-	#main .left .center div.qr button.download:hover .icon {
-		filter: invert(1);
-	}
-
-	#main .left .center div.qr button.download:hover {
-		background: #FFFFFF;
-		border: 3px solid #000000;
-		color: #000000;
-	}
-
-	#main .left .center div.qr button.copy {
-		border: 3px solid #000000;
-		width: 100%;
-		background: #FFFFFF;
-		height: 70px;
-		font-size: 20px;
-		padding: 0 0 0 20px;
-	}
-
-	#main .left .center div.qr button.copy:hover {
-		background: #000000;
-		color: #FFFFFF;
-	}
-
-	#main .right  {
-		border: 3px solid #000000;
-		width: 100%;
-		display: flex;
-		margin-top: 50px;
-		justify-content: center;
-		align-items: center;
-		height: 350px;
-	}
-
-	#main .right #output {
-		
-	}
-	
-	#main .right #output canvas {
-		width: 300px;
-		height: 300px;
-	}
-
-	footer {
-		border-top: 3px solid #000000;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-		padding: 0 30px;
-	}
-
-	footer p {
-		font-size: 12px;
-		text-align: center;
-		margin: 25px 0;
-		color: #A4A4A4;
-	}
-}
-
-@media (max-width: 320px) {	
-	nav {
-		padding: 15px 10px;
-		border-bottom: 3px solid #000000;
-	}
-
-	nav ul {
-		text-align: left;
-	}
-
-	nav ul li {
-		
-	}
-
-	nav ul li a {
-		
-	}
-
-	nav ul li h1 {
-		font-size: 24px;
-		
-	}
-
-	#main {
-		display: block;
-		justify-content: space-between;
-		align-items: center;
-		width: 100%;
-		padding: 20px 10px;
-		height: auto;
-	}
-
-	#main .left {
-		width: 100%;
-		height: 100%;
-		display: flex;
-		justify-content: center;	
-		align-items: center;
-	}
-
-	#main .left .center {
-		width: 100%;
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
-
-	#main .left input {
-		width: 100%;
-		height: 50px;
-		font-size: 16px;
-		padding: 0 0 0 20px;
-		border: 3px solid #000000;
-	}
-
-	#main .left input:focus {
-		background: #F6F6F6;
-	}
-
-	#main .left .center div.qr {
-		margin-top: 10px;
-		width: 100%;
-	}
-
-	#main .left .center div.qr button {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.icon {
-		width: 20px;
-		height: 20px;
-		background: transparent;
-		margin: 0 15px;
-		filter: invert(1);
-	}
-
-	#main .left .center div.qr button:hover .icon {
-		filter: invert(0);
-	}
-
-	#main .left .center div.qr button.generate {
-		border: 3px solid #000000;
-		width: 100%;
-		height: 50px;
-		font-size: 16px;
-		background: #000000;
-		color: #FFFFFF;
-		padding: 0 0 0 20px;
-	}
-
-	#main .left .center div.qr button.generate:hover {
-		background: #FFFFFF;
-		color: #000000;
-	}
-
-	#main .left .center div.qr button.generate .icon {
-		margin-right: 0;
-		margin-left: 15px;
-		filter: invert(0);
-	}
-
-	#main .left .center div.qr button.generate:hover .icon {
-		filter: invert(1);
-	}
-
-	hr {
-		border-bottom: 3px solid #000000;
-		margin: 0 0 30px 0;
-		width: 100%;
-	}
-
-	#main .left .center div.qr button.download {
-		background: #000000;
-		width: 100%;
-		margin-bottom: 10px;
-		height: 50px;
-		color: #FFFFFF;
-		font-size: 16px;
-		padding: 0 0 0 20px;
-	}
-
-	#main .left .center div.qr button.download .icon {
-		margin-left: 0;
-		margin-right: 30px;
-		filter: invert(0);
-	}
-
-	#main .left .center div.qr button.download:hover .icon {
-		filter: invert(1);
-	}
-
-	#main .left .center div.qr button.download:hover {
-		background: #FFFFFF;
-		border: 3px solid #000000;
-		color: #000000;
-	}
-
-	#main .left .center div.qr button.copy {
-		border: 3px solid #000000;
-		width: 100%;
-		background: #FFFFFF;
-		height: 50px;
-		font-size: 16px;
-		padding: 0 0 0 20px;
-	}
-
-	#main .left .center div.qr button.copy:hover {
-		background: #000000;
-		color: #FFFFFF;
-	}
-
-	#main .right  {
-		border: 3px solid #000000;
-		width: 100%;
-		display: flex;
-		margin-top: 30px;
-		justify-content: center;
-		align-items: center;
-		height: 300px;
-	}
-
-	#main .right #output {
-		
-	}
-	
-	#main .right #output canvas {
-		width: 275px;
-		height: 275px;
-	}
-
-	footer {
-		border-top: 3px solid #000000;
-		display: block;
-		align-items: center;
-		line-height: 1px;
-		padding: 0 20px;
-	}
-
-	footer p {
-		font-size: 14px;
-		text-align: center;
-		margin: 30px 0;
-		color: #A4A4A4;
-	}
+	color: #000000;
 }

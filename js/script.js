@@ -96,3 +96,36 @@ function copyQR() {
 		});
 	});
 }
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav ul.right li a");
+
+window.addEventListener("scroll", () => {
+	let current = "";
+
+	sections.forEach((section) => {
+		const sectionTop = section.offsetTop - 150;
+		const sectionHeight = section.clientHeight;
+
+		if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+			current = section.getAttribute("id");
+		}
+	});
+
+	navLinks.forEach((link) => {
+		link.classList.remove("active");
+		if (link.getAttribute("href") === "#" + current) {
+			link.classList.add("active");
+		}
+	});
+});
+
+const loader = document.querySelector(".scroll-loader");
+
+window.addEventListener("scroll", () => {
+	const scrollTop = window.scrollY;
+	const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+	const scrollPercent = (scrollTop / docHeight) * 100;
+
+	loader.style.width = scrollPercent + "%";
+});

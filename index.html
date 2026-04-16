@@ -8,37 +8,149 @@
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
+		<div class="scroll-loader"></div>
 		<nav>
-			<ul>
-				<li>
-					<a href="/">
-						<h1>SCANZO</h1>
-					</a>
-				</li>
+			<ul class="left">
+				<li><a href="/"><h1>SCANZO</h1></a></li>
+			</ul>
+			<ul class="right">
+				<li><a href="#home">Home</a></li>
+				<li><a href="#features">Features</a></li>
+				<li><a href="#tool">Tool</a></li>
+				<li><a href="#faqs">FAQs</a></li>
 			</ul>
 		</nav>
 
-		<section id="main">
-			<div class="left">
-				<div class="center">
-					<input type="text" id="data" placeholder="Enter text or URL" />
-					<div class="qr">
-						<button class="generate" onclick="generateQR()">GENERATE<img class="icon" src="images/arrow_right.svg" alt="Symbol" /></button>
-						<hr />
-						<button class="download" onclick="downloadQR()"><img class="icon" src="images/download.svg" alt="Symbol" />DOWNLOAD</button>
-						<button class="copy" onclick="copyQR()">COPY SVG<img class="icon" src="images/copy.svg" alt="Symbol" /></button>
+		<section id="home">
+			<section class="wrapper">
+				<div class="left">
+					<h1>Create Your Scans Effortlessly</h1>
+					<p>Effortlessly create stunning QR codes with Scanzo. Our intuitive tool allows you to generate personalized QR codes for any text or URL, making it easy to share information in a visually appealing way. </p>
+					<a href="#tool" class="btn">Get Started</a>
+				</div>
+				<div class="right">
+					<img src="images/spotlight.svg" alt="Hero Image" />
+				</div>
+			</section>
+		</section>
+
+		<hr class="home" />
+
+		<section id="features">
+			<h1>Features</h1>
+			<p>Simple, fast, and reliable QR code generation.</p>
+			<section class="wrapper">
+				<div class="feature-card">
+					<img src="images/race.gif" alt="Image" />
+					<h3>Instant QR Generation</h3>
+					<p>Create QR codes instantly with a single click.</p>
+				  </div>
+				
+				  <div class="feature-card">
+					<img src="images/clean-up.gif" alt="Image" />
+					<h3>Clean Design</h3>
+					<p>Minimal interface for a smooth experience.</p>
+				  </div>
+				
+				  <div class="feature-card">
+					<img src="images/palette.gif" alt="Image" />
+					<h3>Black & White Codes</h3>
+					<p>Standard QR codes that work everywhere.</p>
+				  </div>
+				
+				  <div class="feature-card">
+					<img src="images/download.gif" alt="Image" />
+					<h3>Download Options</h3>
+					<p>Save as PNG or SVG</p>
+				  </div>
+				
+				  <div class="feature-card">
+					<img src="images/hidden.gif" alt="Image" />
+					<h3>Privacy First</h3>
+					<p>No tracking. No data storage.</p>
+				  </div>
+
+				  <div class="feature-card">
+					<img src="images/speedometer.gif" alt="Image" />
+					<h3>Fast & Lightweight</h3>
+					<p>No heavy loading or delays.</p>
+				  </div>
+				
+			</section>
+		</section>
+
+		<hr class="home" />
+
+		<section id="tool">
+			<h1>Tool</h1>
+			<p>Generate QR codes for any text or URL.</p>
+			<section class="wrapper">
+				<div class="left">
+					<div class="center">
+						<input type="text" id="data" placeholder="Enter text or URL" />
+						<div class="qr">
+							<button class="generate" onclick="generateQR()">GENERATE<img class="icon" src="images/arrow_right.svg" alt="Symbol" /></button>
+							<hr />
+							<button class="download" onclick="downloadQR()"><img class="icon" src="images/download.svg" alt="Symbol" />DOWNLOAD</button>
+							<button class="copy" onclick="copyQR()">COPY SVG<img class="icon" src="images/copy.svg" alt="Symbol" /></button>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="right">
-				<div id="output"></div>
-			</div>
+				<div class="right">
+					<div id="output"></div>
+				</div>
+			</section>
 		</section>
+
+		<hr class="home" />
 
 		<div id="alertBox" class="alert-box">
 			<p id="alertMessage"></p>
 			<button onclick="closeAlert()">OK</button>
 		</div>
+
+		<section id="faqs">
+			<h1>FAQs</h1>
+			<p>Common questions about using Scanzo.</p>
+			<section class="wrapper">
+				<div class="faq-card">
+					<img src="images/doubt.gif" alt="Image" />
+					<h3>What can I create with Scanzo?</h3>
+					<p>You can generate QR codes for any text or URL, including websites, social media links, and more.</p>
+				</div>
+
+				<div class="faq-card">
+					<img src="images/doubt.gif" alt="Image" />
+					<h3>Is Scanzo free to use?</h3>
+					<p>Yes, Scanzo is completely free with no limits or hidden charges.</p>
+				</div>
+
+				<div class="faq-card">
+					<img src="images/doubt.gif" alt="Image" />
+					<h3>Do you store my data?</h3>
+					<p>No, all QR codes are generated in your browser. We do not store or track any data.</p>
+				</div>
+
+				<div class="faq-card">
+					<img src="images/doubt.gif" alt="Image" />
+					<h3>Can I download my QR code?</h3>
+					<p>Yes, you can download your QR code instantly after generating it.</p>
+				</div>
+
+				<div class="faq-card">
+					<img src="images/doubt.gif" alt="Image" />
+					<h3>What format are the QR codes?</h3>
+					<p>QR codes are generated in high-quality formats suitable for digital and print use.</p>
+				</div>
+
+				<div class="faq-card">
+					<img src="images/doubt.gif" alt="Image" />
+					<h3>Why is my QR not generating?</h3>
+					<p>Make sure you entered valid text or a proper URL. Try refreshing the page if needed.</p>
+				</div>
+
+			</section>
+		</section>
 
 		<footer>
 			<p>&copy; 2026 Scanzo.</p>
